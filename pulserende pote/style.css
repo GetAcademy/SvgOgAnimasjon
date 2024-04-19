@@ -1,0 +1,73 @@
+:root {
+    --green1: #648767;
+    --green2: #7dc95e;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pote {
+    width: 300px;
+    fill: var(--green2);
+}
+
+.potepute1, 
+.potepute2,
+.potepute3,
+.potepute4, 
+.potepute5 {
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+ }
+    
+.potepute1 {
+    animation-duration: 6s;
+}
+    
+.potepute2 {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+}
+    
+.potepute3 {
+    animation-delay: 1s;
+    animation-duration: 6s;
+}
+    
+.potepute4 {
+    animation-delay: 1.5s;
+    animation-duration: 6s;
+}
+    
+.potepute5 {
+    animation-delay: 2s;
+    animation-duration: 6s;
+}
+    
+    
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    15% {
+        transform: scale(0.95, 0.95);
+    }
+
+    30% {
+        transform: scale(1.05, 1.05);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}

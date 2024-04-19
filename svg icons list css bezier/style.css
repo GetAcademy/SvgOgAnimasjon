@@ -1,0 +1,42 @@
+body {
+	background-color: #CCC;
+	padding: 25px;
+}
+#container li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 20px;
+}
+
+#container li a {
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+}
+
+#container li a span {
+	border-radius: 100%;
+	display: block;
+	position: relative;
+	z-index: -1;
+	width: 100px;
+	height: 100px;
+	transition: transform .15s cubic-bezier(.11,.65,1,1.69);
+}
+
+#container li a.pote1 span {
+    background-color: #648767;
+}
+#container li a.pote2 span {
+    background-color: #7dc95e;
+}
+#container li a.pote3 span {
+    background-color: #7cdf64;
+}
+#container li a.pote4 span {
+    background-color: #fff;
+}
+
+#container li a:hover span {
+	transform: scale(1.3);
+}

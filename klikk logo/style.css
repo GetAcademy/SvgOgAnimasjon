@@ -1,0 +1,79 @@
+:root {
+    --green1: #648767;
+    --green2: #7dc95e;
+    --white: #ffff;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btlsvg2 {
+    width: 1000px;
+    stroke: var(--green2);
+    fill: var(--white);
+    stroke-dasharray: 470;
+    stroke-dashoffset: 470;
+}
+
+#btlsvg2.klikk {
+    animation: 3s ease-in forwards klikk,
+    0.8s linear 3s 1 forwards beat;
+}
+
+#btlsvg2.avklikk {
+    animation: 3s ease-out forwards avklikk;
+}
+
+@keyframes klikk {
+    0% {
+        stroke-dashoffset: 470;
+        fill: var(--white);
+    }
+
+    70% {
+        stroke-dashoffset: 0;
+        fill: var(--green2);
+     }
+    
+    100% {
+        stroke-dashoffset: 0;
+        fill: var(--green1);
+        stroke: var(--green1);
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(0.9, 0.9);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes avklikk {
+    0% {
+        stroke-dashoffset: 0;
+        fill: var(--green1);
+        stroke: var(--green1);
+    }
+
+    30% {
+        stroke-dashoffset: 0;
+        fill: var(--green2);
+    }
+
+    100% {
+        stroke-dashoffset: 470;
+        fill: var(--white);
+    }
+}
